@@ -1,0 +1,55 @@
+html, body, * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  width: 100vw;
+  height: 90vh;
+  background: #d8d8d8;
+}
+
+footer {
+  width: 100vw;
+  height: 10vh;
+  background: #333;
+}
+
+#box-login {
+  display: flex;
+  margin: auto;
+  height: 400px;
+  width: 300px;
+  background: white;
+  text-align: center;
+}
+
+#box-login > form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+#box-login > form > .title > * {
+  margin: 20px 0;
+}
+
+#box-login > form > * {
+  margin: 10px auto 10px auto !important;
+}
+
+#box-login > form > input {
+  margin: auto;
+}
+
+#box-login > form > input[type=submit] {
+  padding: 5px 20px;
+  background: #299ad9;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
