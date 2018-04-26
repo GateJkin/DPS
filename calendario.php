@@ -20,7 +20,12 @@
   </head>
   </body>
     <?php
-      echo "<script> var calendarCtrl = new CalendarControl(".date('m').",".date('Y')."); </script>";
+      echo "<script>
+      var calendarCtrl = new CalendarControl(".date('m').",".date('Y').");
+      document.addEventListener('DOMContentLoaded', function(event) {
+        calendarCtrl.buildCalendar();
+      });
+      </script>";
     ?>
     <header id="header">
       <div class="voltar">
@@ -40,49 +45,28 @@
       <div id="calendario">
         <div class="dia-semana">
           <div>
-            <span>Domingo</span>
+            <span>D</span>
           </div>
           <div>
-            <span>Segunda</span>
+            <span>S</span>
           </div>
           <div>
-            <span>Terça</span>
+            <span>T</span>
           </div>
           <div>
-            <span>Quarta</span>
+            <span>Q</span>
           </div>
           <div>
-            <span>Quinta</span>
+            <span>Q</span>
           </div>
           <div>
-            <span>Sexta</span>
+            <span>S</span>
           </div>
           <div>
-            <span>Sabado</span>
+            <span>S</span>
           </div>
         </div>
         <div class="dia-mes">
-          <div class="row">
-            <div class="dia">
-              <span>1</span>
-            </div>
-            <div class="dia"></div>
-            <div class="dia"></div>
-            <div class="dia"></div>
-            <div class="dia"></div>
-            <div class="dia"></div>
-            <div class="dia"></div>
-          </div>
-
-          <div class="row">
-            <div class="dia"></div>
-            <div class="dia"></div>
-            <div class="dia"></div>
-            <div class="dia"></div>
-            <div class="dia"></div>
-            <div class="dia"></div>
-            <div class="dia"></div>
-          </div>
         </div>
       </div>
     </main>

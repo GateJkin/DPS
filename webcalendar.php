@@ -7,8 +7,9 @@
       $year = $_GET['year'];
       $days_in_month = cal_days_in_month(CAL_GREGORIAN, intval(date($month)), intval(date($year)));
       $json = new \stdClass();
-      $json->days_start = date('w', strtotime($year.'-'.$month.'-01'));
+      $json->days_start = intval(date('w', strtotime($year.'-'.$month.'-01')));
       $json->days = array($days_in_month);
+      $json->days_in_month = $days_in_month;
 
       for ($i = 1; $i <= $days_in_month; $i++) {
         $query = "SELECT count(agenda_data) as num_agendamentos FROM Agenda WHERE agenda_data BETWEEN '".$year."-".$month."-".$i."' AND '".$year."-".$month."-".$i." 23:59:59';";
