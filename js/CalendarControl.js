@@ -8,7 +8,11 @@ class CalendarControl {
   queryUp(url, callback = 0) {
     var type = false;
     if(typeof callback == 'function')
+<<<<<<< HEAD
       type = true;
+=======
+    type = true;
+>>>>>>> d6c8ae2affc6848737efd05992a92ababa33f756
 
     if (window.XMLHttpRequest) { // Mozilla, Safari, ...
       var request = new XMLHttpRequest();
@@ -31,8 +35,12 @@ class CalendarControl {
 
     request.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
+<<<<<<< HEAD
               if(typeof callback == 'function')
                 callback(this.responseText);
+=======
+              callback(this.responseText);
+>>>>>>> d6c8ae2affc6848737efd05992a92ababa33f756
             }
     };
 
@@ -54,6 +62,7 @@ class CalendarControl {
   } // Final de month_num_for_text
 
   buildCalendar() {
+<<<<<<< HEAD
     var json = JSON.parse(this.queryUp('webcalendar.php?month=' + (this.month + 1) + '&year=' + this.year));
 
     var row = "<div class='row'>";
@@ -97,6 +106,14 @@ class CalendarControl {
     window.alert(row);
     document.querySelector(".dia-mes").innerHTML = row;
 
+=======
+    var json = JSON.parse(queryUp('websearvice.php?month=' + this.month + '&year=' + this.year));
+
+    for (var day in json) {
+
+    }
+
+>>>>>>> d6c8ae2affc6848737efd05992a92ababa33f756
   } // FInal de buildCalendar
 
   decreaseDate(sum = 1) {
@@ -107,8 +124,11 @@ class CalendarControl {
     this.month = ((this.month - sum) + 12) % 12;
     document.getElementById("month").innerHTML = this.month_num_for_text(this.month);
     document.getElementById("year").innerHTML = this.year;
+<<<<<<< HEAD
 
     this.buildCalendar();
+=======
+>>>>>>> d6c8ae2affc6848737efd05992a92ababa33f756
   } // Final de decreaseDate
 
   // Aumenta o mês
@@ -120,8 +140,11 @@ class CalendarControl {
     this.month = (this.month + sum) % 12;
     document.getElementById("month").innerHTML = this.month_num_for_text(this.month);
     document.getElementById("year").innerHTML = this.year;
+<<<<<<< HEAD
 
     this.buildCalendar();
+=======
+>>>>>>> d6c8ae2affc6848737efd05992a92ababa33f756
   } // Final de increaseDate
 
 } // Final da classe CalendarControl

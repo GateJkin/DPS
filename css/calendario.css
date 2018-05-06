@@ -75,8 +75,13 @@ html, body, * {
 }
 
 #calendario {
+<<<<<<< HEAD
   margin: 2% 10%;
   height: 80%;
+=======
+  margin: 20px 10vw;
+  height: 100%;
+>>>>>>> d6c8ae2affc6848737efd05992a92ababa33f756
 }
 
 #calendario > .dia-semana {
@@ -97,6 +102,7 @@ html, body, * {
 }
 
 #calendario > .dia-mes {
+<<<<<<< HEAD
 
 }
 
@@ -114,6 +120,24 @@ html, body, * {
   height: 11.42vw;*/
   border-left: 2px solid #cecece;
   border-bottom: 2px solid #cecece;
+=======
+}
+
+#calendario > .dia-mes > .row {
+  display: flex;
+}
+
+#calendario > .dia-mes > .row > .dia {
+  display: flex;
+  margin: auto;
+  width: auto;
+  flex: 1;
+  /*width: 14%;
+  height: 11.42vw;*/
+  border-left: 2px solid #A8ADC1;
+  border-bottom: 2px solid #A8ADC1;
+  height: 5vw;
+>>>>>>> d6c8ae2affc6848737efd05992a92ababa33f756
   font-family: 'Roboto Slab', serif;
   font-weight: 100;
   font-size: 30px;
@@ -124,6 +148,7 @@ html, body, * {
      868A8B
      2D3C3F */
   color: #A8ADC1;
+<<<<<<< HEAD
   background: #fdfcfc;
 }
 
@@ -157,4 +182,19 @@ html, body, * {
   padding: 3%;
   color: #2D3C3F;
   border-radius: 3px;
+=======
+  background: #fff;
+}
+
+#calendario > .dia-mes > .row:nth-child(1) > .dia {
+  border-top: 2px solid #A8ADC1;
+}
+
+#calendario > .dia-mes > .row > .dia:nth-child(7) {
+  border-right: 2px solid #A8ADC1;
+}
+
+#calendario > .dia-mes > .row > .dia > span {
+  margin: auto;
+>>>>>>> d6c8ae2affc6848737efd05992a92ababa33f756
 }
