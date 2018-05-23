@@ -21,7 +21,7 @@
   </body>
     <?php
       echo "<script>
-      var calendarCtrl = new CalendarControl(".date('m').",".date('Y').");
+      var calendarCtrl = new CalendarControl(".(isset($_SESSION['month']) ? $_SESSION['month'] : date('m')).",".(isset($_SESSION['year']) ? $_SESSION['year'] : date('Y')).");
       document.addEventListener('DOMContentLoaded', function(event) {
         calendarCtrl.buildCalendar();
       });
@@ -29,7 +29,7 @@
     ?>
     <header id="header">
       <div class="voltar">
-        <a href="agenda.php"><i class="fas fa-arrow-left"></i><span>Voltar</span></a>
+        <a href="home.php"><i class="fas fa-arrow-left"></i><span>Voltar</span></a>
       </div>
       <div class="calendar-control">
         <button onclick="calendarCtrl.decreaseDate(1);"><i class="fas fa-chevron-left"></i></button>

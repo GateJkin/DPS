@@ -3,8 +3,13 @@
   if (isset($_SESSION) && isset($_SESSION['login']) && $_SESSION['login']) {
     if (isset($_GET['month']) && isset($_GET['year'])) {
       require 'db_connection.php';
+      
       $month = $_GET['month'];
       $year = $_GET['year'];
+
+      $_SESSION['month'] = $month;
+      $_SESSION['year'] = $year;
+
       $days_in_month = cal_days_in_month(CAL_GREGORIAN, intval(date($month)), intval(date($year)));
       $json = new \stdClass();
       $json->days_start = intval(date('w', strtotime($year.'-'.$month.'-01')));

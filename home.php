@@ -4,15 +4,17 @@
 <html>
   <head>
     <title>Agenda</title>
-    <link rel="stylesheet" type="text/css" href="css/agenda.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
   </head>
 
   <body>
     <header id="header">
-      <div class="voltar">
-        <a href="home.php"><i class="fas fa-arrow-left"></i><span>Voltar</span></a>
-      </div>
+      <ul class="navigation">
+        <li class="hvr" title="Calendario"><a href="calendario.php"><i class="far fa-calendar-alt"></i></a></li>
+        <li class="hvr" title="Pacientes"><a href="calendario.php"><i class="far fa-address-book"></i></a></li>
+        <li id="filter-box"><input type="text" id="filter-input"><i id="filter" class="fas fa-filter"></i></li>
+      </ul>
     </header>
     <main id="main">
       <div id="agenda">

@@ -15,6 +15,7 @@ html, body, * {
   padding: 0 5vw;
   position: relative;
   display: flex;
+  box-shadow: 0 0px 3px 0 rgba(0,0,0,0.2);
 }
 
 .voltar {
@@ -72,20 +73,18 @@ html, body, * {
 
 #main {
   height: calc(100vh - 70px);
+  display: flex;
 }
 
 #calendario {
-<<<<<<< HEAD
-  margin: 2% 10%;
   height: 80%;
-=======
-  margin: 20px 10vw;
-  height: 100%;
->>>>>>> d6c8ae2affc6848737efd05992a92ababa33f756
+  width: 80vw;
+  margin: auto;
 }
 
 #calendario > .dia-semana {
   display: flex;
+  height: 7%;
 }
 
 #calendario > .dia-semana > div {
@@ -102,42 +101,26 @@ html, body, * {
 }
 
 #calendario > .dia-mes {
-<<<<<<< HEAD
-
+  height: 100%;
 }
 
 #calendario > .dia-mes > .row {
+  flex: 1;
+  height: calc((100% - 7%) / 6);
 }
 
 #calendario > .dia-mes > .row > .dia {
+  display: flex;
   float: left;
   position: relative;
   margin: auto;
   width: 14.2857%;
-  height: 5vw;
+  height: 100%;
   flex: 1;
   /*width: 14%;
   height: 11.42vw;*/
   border-left: 2px solid #cecece;
   border-bottom: 2px solid #cecece;
-=======
-}
-
-#calendario > .dia-mes > .row {
-  display: flex;
-}
-
-#calendario > .dia-mes > .row > .dia {
-  display: flex;
-  margin: auto;
-  width: auto;
-  flex: 1;
-  /*width: 14%;
-  height: 11.42vw;*/
-  border-left: 2px solid #A8ADC1;
-  border-bottom: 2px solid #A8ADC1;
-  height: 5vw;
->>>>>>> d6c8ae2affc6848737efd05992a92ababa33f756
   font-family: 'Roboto Slab', serif;
   font-weight: 100;
   font-size: 30px;
@@ -148,53 +131,68 @@ html, body, * {
      868A8B
      2D3C3F */
   color: #A8ADC1;
-<<<<<<< HEAD
-  background: #fdfcfc;
+  background: #fff;
+  cursor: pointer;
+  transition: all 500ms cubic-bezier(0.86, 0, 0.07, 1);
 }
 
-#calendario > .dia-mes > .row > .ndia {
-  /* D7DCF2
-     A8ADC1
-     606C76
-     868A8B
-     2D3C3F */
-  background: #606C76 !important;
+#calendario > .dia-mes > .row > .dia > .numero-dia {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  font-size: 12px;
+  -webkit-touch-callout: none;  /* iPhone OS, Safari */
+  -webkit-user-select: none;    /* Chrome, Safari 3 */
+  -khtml-user-select: none;     /* Safari 2 */
+  -moz-user-select: none;       /* Firefox */
+  -ms-user-select: none;        /* IE10+ */
+  user-select: none;            /* Possível implementação no futuro */
+  /* cursor: default; */
+  transition: .4s;
+}
+
+#calendario > .dia-mes > .row > .dia:hover {
+  background: #5bc0de;
+  color: #fff;
+  z-index: 2;
+  box-shadow: 0 0 1.5rem rgba(0,0,0,0.3);
+}
+
+#calendario > .dia-mes > .row > .dia:hover > .ocorrencia {
+  color: #fafafa;
 }
 
 #calendario > .dia-mes > .row:nth-child(1) > .dia {
   border-top: 2px solid #cecece;
 }
 
-#calendario > .dia-mes > .row > .dia:last-child {
+#calendario > .dia-mes > .row:nth-child(1) > .ndia {
+  border-top: 2px solid #cecece;
+}
+
+#calendario > .dia-mes > .row > .dia:nth-child(7), .ndia:nth-child(7) {
   border-right: 2px solid #cecece;
-}
-
-#calendario > .dia-mes > .row > .dia > .numero-dia {
-  position: absolute;
-  left: 5%;
-  top: 5%;
-  font-size: 14px;
-  color: #A8ADC1;
-}
-
-#calendario > .dia-mes > .row > .dia > .ocorrencia {
-  margin: auto;
-  padding: 3%;
-  color: #2D3C3F;
-  border-radius: 3px;
-=======
-  background: #fff;
-}
-
-#calendario > .dia-mes > .row:nth-child(1) > .dia {
-  border-top: 2px solid #A8ADC1;
-}
-
-#calendario > .dia-mes > .row > .dia:nth-child(7) {
-  border-right: 2px solid #A8ADC1;
 }
 
 #calendario > .dia-mes > .row > .dia > span {
   margin: auto;
->>>>>>> d6c8ae2affc6848737efd05992a92ababa33f756
+  -webkit-touch-callout: none;  /* iPhone OS, Safari */
+  -webkit-user-select: none;    /* Chrome, Safari 3 */
+  -khtml-user-select: none;     /* Safari 2 */
+  -moz-user-select: none;       /* Firefox */
+  -ms-user-select: none;        /* IE10+ */
+  user-select: none;            /* Possível implementação no futuro */
+  /* cursor: default; */
+}
+
+#calendario > .dia-mes > .row > .ndia {
+  background: #eaeaea;
+  border-left: 2px solid #cecece;
+  border-bottom: 2px solid #cecece;
+  float: left;
+  position: relative;
+  margin: auto;
+  width: 14.2857%;
+  height: 100%;
+  flex: 1;
 }
