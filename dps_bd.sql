@@ -42,7 +42,7 @@ CREATE TABLE `dps_bd`.`Pacientes` (
 
 CREATE TABLE `dps_bd`.`Orientacao` (
   paciente_id INT NOT NULL,
-  id_atendente INT NOT NULL,
+  atendente_id INT NOT NULL,
   dt_acompanhamento DATE NOT NULL,
   ds_atendimento TEXT NOT NULL,
   agendamento_id INT NOT NULL
