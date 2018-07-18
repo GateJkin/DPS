@@ -82,34 +82,33 @@ html, body, * {
   margin: auto;
 }
 
-#calendario > .dia-semana {
+#calendario > .dias-semana {
   display: flex;
   height: 7%;
 }
 
-#calendario > .dia-semana > div {
+#calendario > .dias-semana > div {
   flex: 1;
   display: flex;
   margin: auto;
   padding: 5px;
 }
 
-#calendario > .dia-semana > div > span {
+#calendario > .dias-semana > div > span {
   margin: auto;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 }
 
-#calendario > .dia-mes {
+#calendario > .dias-mes {
   height: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  grid-column-gap: 3.75%;
+  grid-row-gap: 3.75%;
 }
 
-#calendario > .dia-mes > .row {
-  flex: 1;
-  height: calc((100% - 7%) / 6);
-}
-
-#calendario > .dia-mes > .row > .dia {
+#calendario > .dias-mes .dia {
   display: flex;
   float: left;
   position: relative;
@@ -136,7 +135,7 @@ html, body, * {
   transition: all 500ms cubic-bezier(0.86, 0, 0.07, 1);
 }
 
-#calendario > .dia-mes > .row > .dia > .numero-dia {
+#calendario > .dias-mes > .dia > .numero-dia {
   position: absolute;
   left: 3px;
   top: 3px;
@@ -151,30 +150,30 @@ html, body, * {
   transition: .4s;
 }
 
-#calendario > .dia-mes > .row > .dia:hover {
+#calendario > .dias-mes > .dia:hover {
   background: #5bc0de;
   color: #fff;
   z-index: 2;
   box-shadow: 0 0 1.5rem rgba(0,0,0,0.3);
 }
 
-#calendario > .dia-mes > .row > .dia:hover > .ocorrencia {
+#calendario > .dias-mes > .dia:hover > .ocorrencia {
   color: #fafafa;
 }
 
-#calendario > .dia-mes > .row:nth-child(1) > .dia {
+/*#calendario > .dias-mes > .row:nth-child(1) > .dia {
   border-top: 2px solid #cecece;
 }
 
-#calendario > .dia-mes > .row:nth-child(1) > .ndia {
+#calendario > .dias-mes > .row:nth-child(1) > .ndia {
   border-top: 2px solid #cecece;
-}
+}*/
 
-#calendario > .dia-mes > .row > .dia:nth-child(7), .ndia:nth-child(7) {
+#calendario > .dias-mes > .dia:nth-child(7), .ndia:nth-child(7) {
   border-right: 2px solid #cecece;
 }
 
-#calendario > .dia-mes > .row > .dia > span {
+#calendario > .dias-mes > .dia > span {
   margin: auto;
   -webkit-touch-callout: none;  /* iPhone OS, Safari */
   -webkit-user-select: none;    /* Chrome, Safari 3 */
@@ -185,7 +184,7 @@ html, body, * {
   /* cursor: default; */
 }
 
-#calendario > .dia-mes > .row > .ndia {
+#calendario > .dias-mes > .ndia {
   background: #eaeaea;
   border-left: 2px solid #cecece;
   border-bottom: 2px solid #cecece;
